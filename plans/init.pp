@@ -9,6 +9,8 @@
 plan bolt (
   TargetSpec $targets = "localhost"
 ) {
-  run_task('bolt::term', $targets)
+  run_task('bolt::dev', $targets)
   run_task('bolt::apps', $targets)
+  run_task('bolt::gems', $targets)
+  run_task('bolt::ansible', $targets)
 }
